@@ -14,8 +14,6 @@ export const config: Config = {
     reactOutputTarget({
       componentCorePackage: 'demo-web-components',
       proxiesFile: '../react-library/lib/components/stencil-generated/index.ts',
-      includePolyfills: true,
-      includeDefineCustomElements: true,
     }),
     {
       type: 'dist',
@@ -37,4 +35,7 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  extras: {
+    enableImportInjection: true
+  }
 };

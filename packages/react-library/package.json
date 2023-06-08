@@ -1,8 +1,8 @@
 {
   "name": "demo-components-react",
-  "version": "0.0.4",
-  "description": "> TODO: description",
-  "author": "Demo <demo@demo.com>",
+  "version": "0.0.9",
+  "description": "components react",
+  "author": "Juan Pino <juan_pino@bhd.com.do>",
   "homepage": "",
   "license": "ISC",
   "main": "dist/index.js",
@@ -15,21 +15,21 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "node ./__tests__/react-library.test.js",
     "build": "npm run tsc",
     "tsc": "tsc -p ."
   },
+  "dependencies": {
+    "demo-web-components": "^0.0.4"
+  },
   "devDependencies": {
-    "@types/react": "^18.2.6",
+    "@types/react": "^18.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.0.4"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "dependencies": {
-    "demo-web-components": "*"
+    "typescript": "^5.1.3"
   }
 }
