@@ -1,0 +1,122 @@
+/*
+1. Posicionamiento
+2. Modelo caja (Box model)
+3. Tipografia
+4. Visuales
+5. Otros
+*/
+
+/*
+  CSS Custom propertys:
+  --bhd-button-display
+  --bhd-button-justify
+*/
+:host {
+  --button-justify: center;
+  --button-border: var(--pds-button-border);
+  --button-border-radius: var(--pds-button-border-radius);
+  --button-padding-vertical: var(--pds-button-space-vertical-medium);
+  --button-padding-horizontal: var(--pds-space-m);
+  /* font: font-style font-variant font-weight font-size/line-height font-family|caption|icon|menu|message-box|small-caption|status-bar|initial|inherit; */
+  --button-font: var(--pds-button-font-medium);
+  --button-letter-spacing: inherit;
+  --button-color-text: var(--pds-color-gray-50);
+  --button-bg-color: var(--pds-color-primary-purple-500);
+}
+
+:host {
+  display: var(--button-display, inline-block);
+  width: auto;
+}
+
+/* default -> size medium */
+.button {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  justify-content: var(--button-justify, center);
+  align-items: center;
+  border: var(--button-border, none);
+  border-radius: var(--button-border-radius, 0);
+  width: inherit;
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+  font: var(--button-font);
+  letter-spacing: var(--button-letter-spacing);
+  color: var(--button-color-text);
+  background-color: var(--button-bg-color);
+  user-select: none;
+}
+
+:host(:hover) .button:not([disabled]){
+  cursor: pointer;
+  box-shadow: var(--pds-inner-shadow-01);
+}
+
+:host([variant='secondary']:hover) .button:not([disabled]) {
+  --button-bg-color: var(--pds-button-bg-color-hover);
+}
+
+:host([variant='tertiary']:hover) .button:not([disabled]) {
+  --button-bg-color: var(--pds-button-bg-color-hover);
+  box-shadow: none;
+}
+
+:host(:active) .button:not([disabled]){
+  --button-bg-color: var(--pds-color-primary-purple-700);
+}
+
+:host([variant='secondary']:active) .button:not([disabled]), :host([variant='tertiary']:active)  .button:not([disabled]) {
+  --button-bg-color: var(--pds-color-primary-purple-500);
+  --button-color-text: var(--pds-color-white-50);
+}
+
+:host([size='small']) .button {
+  --button-padding-vertical: var(--pds-button-space-vertical-small);
+  --button-padding-horizontal: var(--pds-space-s);
+  --button-font: var(--pds-button-font-small);
+}
+
+:host([variant='secondary']) .button {
+  --button-bg-color: var(--pds-color-white-50);
+  --button-color-text: var(--pds-color-primary-purple-500);
+  --button-border: var(--pds-border-secondary);
+}
+
+:host([variant='tertiary']) .button {
+  --button-bg-color: var(--pds-color-white-50);
+  --button-color-text: var(--pds-color-primary-purple-500);
+  --button-border: var(--pds-border-tertiary);
+}
+
+:host([disabled]) {
+  cursor: not-allowed;
+}
+
+:host .button[disabled] {
+  --button-bg-color: rgba(157, 157, 161, 0.3);;
+  --button-color-text:  rgba(157, 157, 161, 0.6);
+  pointer-events: none;
+  text-decoration: none;
+}
+
+:host([variant='secondary']) .button[disabled] {
+  --button-bg-color: var(--bhd-color-grayscales-50);
+  --button-color-text:  rgba(157, 157, 161, 0.6);
+  --button-border: 1px solid rgba(157, 157, 161, 0.6)
+}
+
+.button:focus-visible {
+  outline: none;
+}
+
+/* :host([loading]) ::slotted(bl-icon) {
+  display: none;
+} */
+
+
+
+:host([loading]) {
+  cursor: wait;
+}
+
+
