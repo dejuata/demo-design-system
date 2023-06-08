@@ -1,37 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { PdsButton, defineCustomElements } from 'demo-components-react';
+import "./App.css";
+import { PdsButton, defineCustomElements } from "demo-components-react";
 
 defineCustomElements();
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <div className="App">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <p>Button demo</p>
+        <p>Button primary medium</p>
         <PdsButton>Button</PdsButton>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <div>
+        <p>Button primary small</p>
+        <PdsButton size="small">Button</PdsButton>
+      </div>
+      <hr />
+      <div>
+        <p>Button secondary medium</p>
+        <PdsButton variant="secondary">Button</PdsButton>
+      </div>
+      <div>
+        <p>Button secondary small</p>
+        <PdsButton variant="secondary" size="small">
+          Button
+        </PdsButton>
+      </div>
+      <hr />
+      <div>
+        <p>Button tertiary medium</p>
+        <PdsButton variant="tertiary">Button</PdsButton>
+      </div>
+      <div>
+        <p>Button tertiary small</p>
+        <PdsButton variant="tertiary" size="small">
+          Button
+        </PdsButton>
+      </div>
+      <hr />
+      <div>
+        <p>Button disabled</p>
+        <PdsButton disabled>Button</PdsButton>
+      </div>
+      <div>
+        <p>Button secondary disabled</p>
+        <PdsButton disabled variant="secondary">
+          Button
+        </PdsButton>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
