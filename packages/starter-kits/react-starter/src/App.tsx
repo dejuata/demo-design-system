@@ -1,21 +1,37 @@
-import {
-  MyComponent,
-  PdsButton,
-  defineCustomElements,
-} from "react-library";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import { PdsButton, defineCustomElements } from 'demo-components-react';
 
 defineCustomElements();
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Hola mundo!!</h1>
-      <PdsButton >Button</PdsButton>
-      <PdsButton variant="secondary">Button</PdsButton>
-      <MyComponent first="Cristian" middle="Gabriel" />
+  const [count, setCount] = useState(0)
 
-    </div>
-  );
+  return (
+    <>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <p>Button demo</p>
+        <PdsButton>Button</PdsButton>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
 
-export default App;
+export default App
