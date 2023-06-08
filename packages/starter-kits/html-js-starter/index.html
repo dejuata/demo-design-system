@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>HTML|JS Starter</title>
+
+    <script
+      type="module"
+      src="./node_modules/demo-web-components/dist/demo-web-components/demo-web-components.esm.js"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./node_modules/demo-web-components/dist/demo-web-components/demo-web-components.css"
+    />
+  </head>
+  <body>
+    <div>
+      <p>Button primary medium</p>
+      <pds-button>Button</pds-button>
+    </div>
+    <div>
+      <p>Button primary small</p>
+      <pds-button size="small">Button</pds-button>
+    </div>
+    <hr />
+    <div>
+      <p>Button secondary medium</p>
+      <pds-button variant="secondary">Button</pds-button>
+    </div>
+    <div>
+      <p>Button secondary small</p>
+      <pds-button variant="secondary" size="small">Button</pds-button>
+    </div>
+    <hr />
+    <div>
+      <p>Button tertiary medium</p>
+      <pds-button variant="tertiary">Button</pds-button>
+    </div>
+    <div>
+      <p>Button tertiary small</p>
+      <pds-button variant="tertiary" size="small">Button</pds-button>
+    </div>
+    <hr />
+    <div>
+      <p>Button disabled</p>
+      <pds-button disabled>Button</pds-button>
+    </div>
+    <div>
+      <p>Button secondary disabled</p>
+      <pds-button disabled variant="secondary">Button</pds-button>
+    </div>
+  </body>
+</html>
