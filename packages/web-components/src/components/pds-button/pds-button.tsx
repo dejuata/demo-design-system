@@ -55,8 +55,8 @@ export class PdsButton {
           };
 
     return (
-      <Host onClick={this.handleClick}>
-        <TagType class="button" {...attrs} aria-disabled={disabled} aria-label={accessibleName} title={accessibleName} disabled={disabled}>
+      <Host onClick={this.handleClick} aria-disabled={disabled ? 'true' : null}>
+        <TagType class="button" {...attrs} aria-label={accessibleName} title={accessibleName} disabled={disabled}>
           <slot></slot>
         </TagType>
       </Host>

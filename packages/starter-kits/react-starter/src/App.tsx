@@ -3,12 +3,21 @@ import { PdsButton, defineCustomElements } from "demo-components-react";
 
 defineCustomElements();
 
+
 function App() {
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+
   return (
     <div className="App">
       <div>
         <p>Button primary medium</p>
-        <PdsButton>Button</PdsButton>
+        <button onClick={handleClick}>Button html</button>
+        <button onClick={handleClick} disabled>Button html</button>
+        <PdsButton onClick={console.log}>Button click</PdsButton>
+        <PdsButton onClick={console.log} disabled>Button click</PdsButton>
       </div>
       <div>
         <p>Button primary small</p>

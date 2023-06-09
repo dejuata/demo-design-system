@@ -90,10 +90,11 @@
 
 :host([disabled]) {
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 :host .button[disabled] {
-  --button-bg-color: rgba(157, 157, 161, 0.3);;
+  --button-bg-color: rgba(157, 157, 161, 0.3);
   --button-color-text:  rgba(157, 157, 161, 0.6);
   pointer-events: none;
   text-decoration: none;

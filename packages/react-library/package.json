@@ -1,6 +1,6 @@
 {
   "name": "demo-components-react",
-  "version": "0.0.9",
+  "version": "0.0.15",
   "description": "components react",
   "author": "Juan Pino <juan_pino@bhd.com.do>",
   "homepage": "",
@@ -24,7 +24,7 @@
     "tsc": "tsc -p ."
   },
   "dependencies": {
-    "demo-web-components": "^0.0.4"
+    "demo-web-components": "^0.0.10"
   },
   "devDependencies": {
     "@types/react": "^18.2.9",
