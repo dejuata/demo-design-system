@@ -27,13 +27,6 @@ export class PdsButton {
   @Prop() rel: string | undefined;
 
   private handleClick = (ev: Event) => {
-    ev.stopPropagation();
-
-    // we need to check that because we use aria-disabled which doesn't prevent the onclick event to be fired.
-    if (this.disabled) {
-      return;
-    }
-
     if (hasShadowDom(this.el)) {
       const form = this.el.closest('form');
       if (form) {
@@ -62,8 +55,8 @@ export class PdsButton {
           };
 
     return (
-      <Host>
-        <TagType class="button" onClick={this.handleClick} {...attrs} aria-disabled={disabled} aria-label={accessibleName} title={accessibleName} disabled={disabled}>
+      <Host onClick={this.handleClick}>
+        <TagType class="button" {...attrs} aria-disabled={disabled} aria-label={accessibleName} title={accessibleName} disabled={disabled}>
           <slot></slot>
         </TagType>
       </Host>
